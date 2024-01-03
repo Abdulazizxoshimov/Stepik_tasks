@@ -1,0 +1,54 @@
+
+package data
+
+import (
+        "fmt"
+        "unicode"
+        "strconv"
+        )
+
+
+func main() {
+   a := "%^80"
+    b := "hhhhh20&&&&nd"
+    c := []rune(a)
+    var z,s string
+    
+    for i := 0 ; i < len(c) ; i++ {
+            if unicode.IsDigit(c[i]) == true {
+                    z += string(c[i])
+            }
+    }
+    e := []rune(b)
+    
+    for i := 0 ; i < len(e) ; i++ {
+            if unicode.IsDigit(e[i]) == true {
+                    s += string(e[i])
+            }
+    }
+   q := adding(z , s)
+   fmt.Println(q)
+}
+func adding(s1, s2 string) int64 {
+    var sum int64
+	Arr := []rune(s1)
+	for _, r := range Arr {
+		if !unicode.IsDigit(r) {
+			s1 = strings.ReplaceAll(s1, string(r), "")
+		}
+	}
+	result, _ := strconv.ParseInt(s1, 10, 64)
+    sum += result
+    
+	Arr1 := []rune(s2)
+	for _, r := range Arr1 {
+		if !unicode.IsDigit(r) {
+			s2 = strings.ReplaceAll(s2, string(r), "")
+		}
+	}
+	result1, _ := strconv.ParseInt(s2, 10, 64)
+    sum += result1
+    
+
+	return sum
+}

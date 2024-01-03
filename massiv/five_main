@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main(){
+    var a,b int
+    array := []int{}
+    fmt.Scan(&a)
+    var sum int
+    for i := 0; i < a; i++ {
+        fmt.Scan(&b)
+        array = append(array, b)
+        if array[i] > 0 {
+            sum = sum + 1   
+        }
+    }
+    fmt.Print(sum)
+}

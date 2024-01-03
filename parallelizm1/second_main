@@ -1,0 +1,5 @@
+func task2(ch chan string, s string){
+    for i := 0; i < 5; i ++ {
+        ch <- s + " "
+    }
+}

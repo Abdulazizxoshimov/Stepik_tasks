@@ -1,0 +1,26 @@
+import main
+import "fmt"
+func main(){
+     fmt.Print(T())
+}
+func M()float64{
+    var a float64
+    a = p * v
+    return a
+}
+
+func W()float64{
+    var b float64
+    b = math.Sqrt(k / M())
+    return b
+}
+
+func T()float64{
+    var d float64
+    d = 6 / W()
+    return d
+}
+
+
+
+

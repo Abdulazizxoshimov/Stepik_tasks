@@ -1,0 +1,15 @@
+package main
+import "fmt"
+
+func main(){
+    var a, b float32
+    var d float32
+    fmt.Scan(&a, &b)
+    d = (a + b) / 2
+    fmt.Print(d)
+}
+
+
+
+
+

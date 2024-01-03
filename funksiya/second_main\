@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func minimumFromFour() int {
+    min := 0
+    var a, b, c, d int
+    fmt.Scan(&a, &b, &c, &d)
+    
+    if a < b && a < d && a < c {
+        min = a
+    }else if b < d && b < c {
+        min = b
+    }else if d < c {
+        min = d
+    }else {
+        min = c
+    }
+ return min   
+}
+func main(){
+    var a, b, c , d int
+    fmt.Scan(&a, &b, &c , &d)
+    fmt.Print(minimumFromFour(a, b, c, d))
+}

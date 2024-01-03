@@ -1,0 +1,19 @@
+package main 
+
+import "fmt"
+
+func main(){
+    var n, d, c int
+    fmt.Scan(&n, &d, &c)
+    
+    for i := 1; i <= n; i++ {
+        if i % d == 0 && i % c != 0 {
+            fmt.Print(i)
+            break
+        }
+    }
+}
+
+
+
+

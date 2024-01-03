@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main(){
+    var a int
+    fmt.Scan(&a)
+    b := a % 10
+    d := a / 100
+    c := ((a / 10) % 10)
+    if b == d || d == c || c == b {
+        fmt.Print("NO")
+    }else {
+        fmt.Print("YES")
+    }
+}

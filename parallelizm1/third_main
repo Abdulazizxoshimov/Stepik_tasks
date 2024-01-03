@@ -1,0 +1,16 @@
+func removeDuplicates(inputStream chan string, outputStream chan string){
+    str := ""
+    for {
+        a, ok :=<- inputStream
+
+        if !ok {
+            break
+        }
+        if str != a{
+            outputStream <- a
+            str = a
+        }
+    }
+    close(outputStream)
+    
+}

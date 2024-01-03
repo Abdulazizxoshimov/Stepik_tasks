@@ -1,0 +1,20 @@
+package main
+import "fmt"
+
+func main(){
+    var a, sum int
+    fmt.Scan(&a)
+	for a != 0 {
+    sum = sum + (a % 10)
+    a = a / 10
+    }	
+    if sum > 10 {
+		fmt.Print(sum % 10 + sum / 10)
+	}else {
+    fmt.Print(sum)
+	}
+}
+
+
+
+

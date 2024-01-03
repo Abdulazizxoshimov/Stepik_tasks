@@ -1,0 +1,41 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	// "time"
+	"strconv"
+)
+
+func main() {
+    text, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+	ans := ""
+	ans += string(text[11]) + string(text[12])
+	num, err := strconv.Atoi(ans)
+	var answ string
+	if err != nil{
+		panic(err)
+	}
+	if num < 13{
+		fmt.Print(text)
+	}else{
+		a := ""
+		a += string(text[8])+ string(text[9])
+		num2, _ := strconv.Atoi(a)
+		num2 += 1
+		b := strconv.Itoa(num2)
+		
+		for i := 0; i < 8; i ++ {
+			answ += string(text[i])
+		}
+		answ += b
+		for i := 10;  i <  len(text); i ++ {
+			answ += string(text[i])
+		}
+	}
+
+	fmt.Print(answ)
+    
+
+}

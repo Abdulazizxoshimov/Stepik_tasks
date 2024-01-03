@@ -1,0 +1,17 @@
+package main
+import "fmt"
+
+func main(){
+    var a int 
+    sum := 1
+    fmt.Scan(&a)
+    for i := 1; sum <= a; i++ {
+        fmt.Print(sum, " ")
+        sum = sum * 2
+        
+    }
+}
+
+
+
+

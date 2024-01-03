@@ -1,0 +1,28 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+	"time"
+)
+func main(){
+	text, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+	b := strings.Split(text, ",")
+	
+	time1, err := time.Parse("02.01.2006 15:04:05", b[0][0:19])
+	if err != nil{
+		fmt.Print(err)
+	}
+	time2, err := time.Parse("02.01.2006 15:04:05", b[1][0:19])
+	if err != nil{
+		fmt.Print(err)
+	}
+	if time1.Before(time2){
+		fmt.Println(time2.Sub(time1))
+	}else {
+		fmt.Println(time1.Sub(time2))
+	
+}
+}

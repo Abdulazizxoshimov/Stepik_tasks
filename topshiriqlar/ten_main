@@ -1,0 +1,31 @@
+package main
+import "fmt"
+
+func main(){
+    var a, b, c int
+    fmt.Scan(&a, &b)
+    if a > b {
+        for i := a; i >= b; i-- {
+            if i % 7 == 0 {
+                c = -1
+                fmt.Print(i)
+                break
+            }
+        }
+    }else {
+        for i := b; i >= a; i-- {
+            if i % 7 == 0 {
+                c = -1
+                fmt.Print(i)
+                break
+            }
+        }
+    }
+    if c != -1 {
+        fmt.Print("NO")
+    }
+}
+
+
+
+

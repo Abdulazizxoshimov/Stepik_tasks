@@ -1,0 +1,29 @@
+package main
+import "fmt"
+
+func main(){
+    var a, b, c, d int
+    fmt.Scan(&a)
+    b = 1
+    c = 1
+    cnt := 2
+    for d < a {
+        d = b + c
+        //fmt.Print(d)
+        cnt++
+        b = d
+        if d >= a {
+            break
+        }
+        d = b + c
+        //fmt.Print(d)
+        cnt++
+        c = d
+    }
+    if d == a {
+        fmt.Print(cnt)
+    }else {
+        fmt.Print("-1")
+    }
+    
+}

@@ -1,0 +1,22 @@
+func calculator(arguments <-chan int, done <-chan struct{}) <-chan int {
+    ans := make(chan int)
+    
+    
+    go func(){
+        var sum int
+        defer close(ans)
+        for{
+            select{
+                case a := <- arguments:
+                    sum += a
+                case <- done:
+                    ans <- sum
+                    return
+                
+                default:
+                fmt.Println("")
+            }
+        }
+    }()
+    return ans
+}
